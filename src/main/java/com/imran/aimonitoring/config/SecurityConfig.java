@@ -38,7 +38,7 @@ public class SecurityConfig {
                     // ✅ INTERNAL — baseline computation endpoints
                     //    In production, protect these with an API key or remove entirely
                     .requestMatchers("/internal/**").permitAll()
-                    .requestMatchers("/actuator/health").permitAll()               
+                    .requestMatchers("/actuator/**").permitAll()               
 
                     // ✅ ADMIN ONLY
                     .requestMatchers("/api/admin/**").hasRole("ADMIN")
